@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h1 style="text-align: center">Product Name</h1>
+
+        <div class="form">
+            <form action="/extract" method="POST">
+                <input type  ="text" name="content" id="content">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+{% endblock %}
